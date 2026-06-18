@@ -37,13 +37,4 @@ git push -u origin main
 
 After deploy, test `/health`, `/docs`, and `/chat` on your Render service URL.
 
-## AI chat (environment variables)
-
-In Render → your service → **Environment**, add:
-
-| Key | Value |
-|-----|-------|
-| `OPENAI_API_KEY` | your OpenAI API key |
-| `OPENAI_MODEL` | optional, defaults to `gpt-4o-mini` |
-
-Push to GitHub and Render will redeploy automatically.
+`/chat` uses a mock echo response — no API keys required.
