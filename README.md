@@ -38,3 +38,10 @@ git push -u origin main
 After deploy, test `/health`, `/docs`, and `/chat` on your Render service URL.
 
 `/chat` uses a mock echo response — no API keys required.
+
+## Structured logging
+
+Each request emits JSON logs to stdout (visible in Render → **Logs**):
+
+- `http_request` — method, path, status code, duration_ms
+- `chat_request` / `chat_response` — message and reply lengths (not full content)
